@@ -58,4 +58,9 @@ url4=domain+path
 res15=requests.get(url3, headers={'X-Rewrite-URL':url4} , allow_redirects=False ,  verify=False)		
 print(Style.BRIGHT + Fore.GREEN + "X-Rewrite-URL" + " : "+ Fore.YELLOW + str(res15.status_code)+ "\t :" + Fore.YELLOW + str(len(res15.content)))
 
-print(Style.BRIGHT + Fore.RED + "finished automating . begin manual check . good luck " + "\n")
+#Custom header
+res16=requests.get(url, headers={'X-Custom-IP-Authorization:':'LOCALHOST.LOCAL'} , allow_redirects=False ,  verify=False)		
+print(Style.BRIGHT + Fore.GREEN + "X-Custom-IP-Authorization:" + " : "+ Fore.YELLOW + str(res14.status_code)+ "\t :" + Fore.YELLOW + str(len(res16.content)))
+
+#Change color as per your preference
+print(Style.BRIGHT + Fore.WHITE + "finished automating . begin manual check . good luck " + "\n")
